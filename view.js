@@ -16,7 +16,7 @@ function View(){
         var button = event.target;
         console.log(button);
         var userInput = $(button).text();
-        rpsController.player_input(userInput);
+        rpsController.get_player_input(userInput);
     }.bind(this);
 
     this.showCPU = function(){
