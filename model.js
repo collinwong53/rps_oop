@@ -1,8 +1,10 @@
 function Model(){
 	this.compRandPick = '';
-	// this.gameReset = false;
+	this.userInputClicked=false;
+	this.gameReset = false;
 
 	this.randomCompPick = function(){		//returns randomly generated computer pick
+		// this.compRandGenerated=true;
 		var randPick = Math.floor((Math.random()*3)+1);
 		switch(randPick){
 			case 1:
@@ -19,7 +21,7 @@ function Model(){
 
 	this.resetGame = function(){	//sets compRandPick to empty string
 		this.compRandPick = '';		//gameReset needs to be reset to false in controller
-		// this.gameReset = true;
+		this.gameReset = true;
 
 	};
 }
