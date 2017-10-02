@@ -1,10 +1,10 @@
 function Controller(){
     this.clickable = true;
     this.player_input = function(player_pick){
-        this.player_input = player_pick;
+        this.player_input = player_pick.toLowerCase();
     }
-    this.cpu_input = function(cpu_pick){
-        this.cpu_input = cpu_pick;
+    this.cpu_input = function(){
+        this.cpu_input = rpsModel.randomCompPick();
     };
     this.win_condition = function(){
         if(this.player_input === "rock" && this.cpu_input ==="scissor"){

@@ -11,21 +11,21 @@ function View(){
 //                    rpsController.player_input(userInput);
 //
 //                })
-
+    // $('.user_move').click
     this.pickMove = function(){
         var button = event.target;
         console.log(button);
         var userInput = $(button).text();
         rpsController.player_input(userInput);
-    }.bind(this)
+    }.bind(this);
 
     this.showCPU = function(){
         var cpuInput = cpu_input;
         rpsController.win_condition(cpu_input);
         $(cpuPick).append(cpuInput)
-    }
+    };
 
-}
+};
 
 // var rpsController = new Controller();
 
