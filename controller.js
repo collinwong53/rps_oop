@@ -35,15 +35,15 @@ function Controller(){
     };
 
     this.reset = function(){
-        if(rpsModel.userInputClicked){
-            rpsModel.userInputclicked = false;
-            // rpsModel.gameReset= true;
-            rpsModel.compRandPick ='';
-            rpsModel.gameWinnerMessage='';
-            this.player_input = null;
-            this.cpu_input = null;
-            this.game_winner = null;
-            rpsView.showResult();
-        }
+
+        rpsModel.userInputclicked = false;
+        // rpsModel.gameReset= true;
+        rpsModel.compRandPick ='';
+        rpsModel.gameWinnerMessage='';
+        this.player_input = null;
+        this.cpu_input = null;
+        this.game_winner = null;
+        rpsView.showResult();
+        
     };
 }
