@@ -4,7 +4,11 @@
         <meta charset="utf-8">
         <title>Rock-Paper-Scissors OOP</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="model.js"></script>
+        <script type="text/javascript" src="controller.js"></script>
+        <script type="text/javascript" src="view.js"></script>
+        <script type="text/javascript" src="main.js"></script>
         <script>
             /**
              * Model
@@ -35,6 +39,17 @@
             function Controller(){
 
             }
+            var rpsController = null;
+var rpsView = null;
+var rpsModel = null;
+
+$(document).ready(function(){
+    rpsController = new Controller();
+    rpsView = new View();
+    rpsModel = new Model();
+
+    $('.user_move').on('click',rpsView.pickMove);
+});
         </script>
         
     </head>

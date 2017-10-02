@@ -27,7 +27,7 @@ function View(){
 
 }
 
-var rpsController = new Controller();
+// var rpsController = new Controller();
 
 
 
