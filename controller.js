@@ -31,8 +31,12 @@ function Controller(){
         this.clickable = false;
     }
     this.reset = function(){
-        this.cpu_input = null;
-        this.player_input = null;
+        this.cpu_input = function(cpu_pick){
+            this.cpu_input = cpu_pick;
+        };
+        this.player_input = function(player_pick){
+            this.player_input = player_pick;
+        }
         this.clickable = true;
     }
 }
