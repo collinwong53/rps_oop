@@ -8,50 +8,7 @@
         <script type="text/javascript" src="model.js"></script>
         <script type="text/javascript" src="controller.js"></script>
         <script type="text/javascript" src="view.js"></script>
-        <script type="text/javascript" src="main.js"></script>
-        <script>
-            /**
-             * Model
-             * - randomly generates and stores computer's move
-             * - contains method for resetting game
-             * @constructor
-             */
-            function Model(){
-
-            }
-
-            /**
-             * View
-             * - handles updating of DOM
-             * - contains method for user picking a move
-             * @constructor
-             */
-            function View(){
-
-            }
-
-            /**
-             * Controller
-             * - does comparison to determine who wins
-             * - acts as middleman between View and Model
-             * @constructor
-             */
-            function Controller(){
-
-            }
-            var rpsController = null;
-var rpsView = null;
-var rpsModel = null;
-
-$(document).ready(function(){
-    rpsController = new Controller();
-    rpsView = new View();
-    rpsModel = new Model();
-
-    $('.user_move').on('click',rpsView.pickMove);
-});
-        </script>
-        
+        <script src = "main.js"></script>
     </head>
     
     <body>
