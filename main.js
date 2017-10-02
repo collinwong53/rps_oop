@@ -13,5 +13,6 @@ $(document).ready(function(){
 
 function addClickHandlers(){
     $('.user_move').on('click',rpsView.pickMove);
+    $('#reset').click(rpsView.resetButtonClicked);
 }
 

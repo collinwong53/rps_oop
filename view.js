@@ -2,12 +2,20 @@ function View(){
     this.cpuPick = null;
     this.result = null;
     this.createElements = function(){
-        this.cpuPick = $('<div>').css('border','1px solid black', 'height','50px','width','50px');
+        this.cpuPick = $('<div>').css({
+            'border':'1px solid black',
+            'height': '75px',
+            'width' : '100px'
+        });
         $('body').append(this.cpuPick);
-        this.result = $('<div>').css('border','1px solid black',  'height','50px','width','50px');
+        this.result = $('<div>').css({
+            'border': '1px solid black',
+            'height': '75px',
+            'width' : '100px'
+        });
         $('body').append(this.result);
     };
-
+    this.createElements();
 //                this.pickMove = $('.user_move').click(function(){
 //                    var userInput = ($('.user_move').text());
 //                    rpsController.player_input(userInput);
@@ -16,7 +24,7 @@ function View(){
     // $('.user_move').click
     this.pickMove = function(){
         if(!rpsModel.userInputClicked) {
-            this.createElements();
+            // this.createElements();
             var button = event.target;
             console.log(button);
             var userInput = $(button).text();
@@ -29,10 +37,13 @@ function View(){
         // var cpuInput = cpu_input;
         // rpsController.win_condition(cpu_input);
         // $(cpuPick).append(cpuInput)
-        $(this.cpuPick).text(rpsController.win_condition());
+        $(this.cpuPick).text(rpsModel.compRandPick);
+        $(this.result).text(rpsModel.gameWinnerMessage);
     };
 
-
+    this.resetButtonClicked = function(){
+        rpsController.reset();
+    };
 
 };
 

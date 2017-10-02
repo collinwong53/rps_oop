@@ -2,6 +2,7 @@ function Model(){
 	this.compRandPick = '';
 	this.userInputClicked=false;
 	this.gameReset = false;
+	this.gameWinnerMessage = '';
 
 	this.randomCompPick = function(){		//returns randomly generated computer pick
 		// this.compRandGenerated=true;
